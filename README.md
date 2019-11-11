@@ -8,6 +8,15 @@ This extension allows to navigate in any VSCode document by indentation level. F
 
 It also provides some extra commands, such as navigate by word, that is optimized for screenreaders, and keystrokes that simplify selection of large amounts of text.
 
+## Download
+
+(IndentNav latest release)[https://github.com/mltony/vscode-indent-nav/releases/latest/download/indent-nav.vsix]
+
+## Installation
+
+In VSCode, Press `Control+Shift+X` to navigate to extensions manager.
+Then click on the actions menu, and select `Install from vsix`.
+
 ## Keystrokes
 
 * Alt+Up/Down - jump to previous/next line with the same indentation level
