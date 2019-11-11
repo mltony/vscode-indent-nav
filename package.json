@@ -1,0 +1,188 @@
+{
+	"name": "indent-nav",
+	"displayName": "IndentNav",
+	"description": "Indentation navigation.",
+	"version": "1.0.0",
+	"publisher": "mltony",
+	"license": "MIT",
+	"bugs": "https://github.com/mltony/vscode-indent-nav/issues",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mltony/vscode-indent-nav"
+	},
+	"engines": {
+		"vscode": "^1.39.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.nextSibling"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.wordRight",
+				"title": "Move to next word - screenreader compatible"
+			},
+			{
+				"command": "extension.wordLeft",
+				"title": "Move to previous word - screenreader compatible"
+			},
+			{
+				"command": "extension.nextSibling",
+				"title": "Jump to next sibling"
+			},
+			{
+				"command": "extension.previousSibling",
+				"title": "Jump to previous sibling"
+			},
+			{
+				"command": "extension.nextSiblingForce",
+				"title": "Jump to next sibling force"
+			},
+			{
+				"command": "extension.previousSiblingForce",
+				"title": "Jump to previous sibling force"
+			},
+			{
+				"command": "extension.firstSibling",
+				"title": "Jump to first sibling"
+			},
+			{
+				"command": "extension.lastSibling",
+				"title": "Jump to last sibling"
+			},
+			{
+				"command": "extension.nextChild",
+				"title": "Jump to next child"
+			},
+			{
+				"command": "extension.previousChild",
+				"title": "Jump to previous child"
+			},
+			{
+				"command": "extension.previousParent",
+				"title": "Jump to previous parent"
+			},
+			{
+				"command": "extension.nextParent",
+				"title": "Jump to next parent"
+			},
+			{
+				"command": "extension.startSelection",
+				"title": "Marks current line as start of selection"
+			},
+			{
+				"command": "extension.finishSelection",
+				"title": "Selects lines from previously selected marker until current line"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.wordRight",
+				"key": "ctrl-right",
+				"mac": "control-right",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.wordLeft",
+				"key": "ctrl-left",
+				"mac": "control-left",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.nextSibling",
+				"key": "alt-down",
+				"mac": "alt-down",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.previousSibling",
+				"key": "alt-up",
+				"mac": "alt-up",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.nextSiblingForce",
+				"key": "alt-shift+PageDown",
+				"mac": "alt-shift+PageDown",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.previousSiblingForce",
+				"key": "alt-shift+PageUp",
+				"mac": "alt-shift+PageUp",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.firstSibling",
+				"key": "alt-shift-home",
+				"mac": "alt-shift-home",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.lastSibling",
+				"key": "alt-shift-end",
+				"mac": "alt-shift-end",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.nextChild",
+				"key": "alt-pagedown",
+				"mac": "alt-pagedown",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.previousChild",
+				"key": "alt-pageup",
+				"mac": "alt-pageup",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.previousParent",
+				"key": "alt-home",
+				"mac": "alt-home",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.nextParent",
+				"key": "alt-end",
+				"mac": "alt-end",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.startSelection",
+				"key": "alt-f9",
+				"mac": "alt-f9",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.finishSelection",
+				"key": "alt-f10",
+				"mac": "alt-f10",
+				"when": "editorTextFocus"
+			}
+
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.39.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"typescript": "^3.3.1",
+		"tslint": "^5.12.1",
+		"vscode-test": "^1.2.0"
+	}
+}
