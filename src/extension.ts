@@ -11,61 +11,61 @@ export function activate(context: vscode.ExtensionContext) {
 	let indentNav = new IndentNav();
 	console.log('indent-nav is now active!');
 
-	let wordRight = vscode.commands.registerCommand('extension.wordRight', () => {
+	let wordRight = vscode.commands.registerCommand('indent-nav.wordRight', () => {
 		indentNav.moveByWord(1);
 	});
 	context.subscriptions.push(wordRight);
-	let wordLeft = vscode.commands.registerCommand('extension.wordLeft', () => {
+	let wordLeft = vscode.commands.registerCommand('indent-nav.wordLeft', () => {
 		indentNav.moveByWord(-1);
 	});
 	context.subscriptions.push(wordLeft);
 
-	let nextSibling = vscode.commands.registerCommand('extension.nextSibling', () => {
+	let nextSibling = vscode.commands.registerCommand('indent-nav.nextSibling', () => {
 		indentNav.jumpToIndent(1, 0);
 	});
 	context.subscriptions.push(nextSibling);
-	let previousSibling = vscode.commands.registerCommand('extension.previousSibling', () => {
+	let previousSibling = vscode.commands.registerCommand('indent-nav.previousSibling', () => {
 		indentNav.jumpToIndent(-1, 0);
 	});
 	context.subscriptions.push(previousSibling);
-	let nextSiblingForce = vscode.commands.registerCommand('extension.nextSiblingForce', () => {
+	let nextSiblingForce = vscode.commands.registerCommand('indent-nav.nextSiblingForce', () => {
 		indentNav.jumpToIndent(1, 0, true);
 	});
 	context.subscriptions.push(nextSiblingForce);
-	let previousSiblingForce = vscode.commands.registerCommand('extension.previousSiblingForce', () => {
+	let previousSiblingForce = vscode.commands.registerCommand('indent-nav.previousSiblingForce', () => {
 		indentNav.jumpToIndent(-1, 0, true);
 	});
 	context.subscriptions.push(previousSiblingForce);
-	let lastSibling = vscode.commands.registerCommand('extension.lastSibling', () => {
+	let lastSibling = vscode.commands.registerCommand('indent-nav.lastSibling', () => {
 		indentNav.jumpToIndent(1, 0, false, true);
 	});
 	context.subscriptions.push(lastSibling);
-	let firstSibling = vscode.commands.registerCommand('extension.firstSibling', () => {
+	let firstSibling = vscode.commands.registerCommand('indent-nav.firstSibling', () => {
 		indentNav.jumpToIndent(-1, 0, false, true);
 	});
 	context.subscriptions.push(firstSibling);
 
-	let nextChild = vscode.commands.registerCommand('extension.nextChild', () => {
+	let nextChild = vscode.commands.registerCommand('indent-nav.nextChild', () => {
 		indentNav.jumpToIndent(1, 1);
 	});
 	context.subscriptions.push(nextChild);
-	let previousChild = vscode.commands.registerCommand('extension.previousChild', () => {
+	let previousChild = vscode.commands.registerCommand('indent-nav.previousChild', () => {
 		indentNav.jumpToIndent(-1, 1);
 	});
 	context.subscriptions.push(previousChild);
-	let previousParent = vscode.commands.registerCommand('extension.previousParent', () => {
+	let previousParent = vscode.commands.registerCommand('indent-nav.previousParent', () => {
 		indentNav.jumpToIndent(-1, -1, true);
 	});
 	context.subscriptions.push(previousParent);
-	let nextParent = vscode.commands.registerCommand('extension.nextParent', () => {
+	let nextParent = vscode.commands.registerCommand('indent-nav.nextParent', () => {
 		indentNav.jumpToIndent(1, -1, true);
 	});
 	context.subscriptions.push(nextParent);
-	let startSelection = vscode.commands.registerCommand('extension.startSelection', () => {
+	let startSelection = vscode.commands.registerCommand('indent-nav.startSelection', () => {
 		indentNav.startSelection();
 	});
 	context.subscriptions.push(startSelection);
-	let finishSelection = vscode.commands.registerCommand('extension.finishSelection', () => {
+	let finishSelection = vscode.commands.registerCommand('indent-nav.finishSelection', () => {
 		indentNav.finishSelection();
 	});
 	context.subscriptions.push(finishSelection);
