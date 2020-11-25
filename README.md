@@ -14,6 +14,14 @@ It also provides some extra commands, such as navigate by word, that is optimize
 
 ## Installation
 
+IndentNav can be installed either from command line or VSCode GUI. At this point IndentNav is not available in extension store.
+
+### Installation via command line
+
+```code.exe --install-extension indent-nav.vsix```
+
+### Instalation from VSCode GUI
+
 In VSCode, Press `Control+Shift+X` to navigate to extensions manager.
 Then click on the actions menu, and select `Install from vsix`.
 
