@@ -2,8 +2,8 @@
 	"name": "indent-nav",
 	"displayName": "IndentNav",
 	"description": "Indentation navigation.",
-	"version": "1.0.1",
-	"publisher": "mltony",
+	"version": "1.0.3",
+	"publisher": "TonyMalykh",
 	"license": "MIT",
 	"bugs": "https://github.com/mltony/vscode-indent-nav/issues",
 	"repository": {
@@ -177,7 +177,6 @@
 				"mac": "alt-f10",
 				"when": "editorTextFocus"
 			}
-
 		]
 	},
 	"scripts": {
@@ -197,5 +196,11 @@
 		"typescript": "^3.3.1",
 		"tslint": "^5.12.1",
 		"vscode-test": "^1.2.0"
-	}
+	},
+	"dependencies": {
+		"vsce": "^1.79.5"
+	},
+	"extensionKind": [
+		"ui"
+	]
 }
