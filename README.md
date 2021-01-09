@@ -14,7 +14,8 @@ It also provides some extra commands, such as navigate by word, that is optimize
 
 ## Installation
 
-IndentNav can be installed either from command line or VSCode GUI. At this point IndentNav is not available in extension store.
+IndentNav can be installed from VSCode MarketPlace.
+Alternatively, IndentNav can be installed either from command line or VSCode GUI, see below.
 
 ### Installation via command line
 
