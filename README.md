@@ -4,7 +4,7 @@ IndentNav extension for VSCode for screenreader users.
 
 ## Features
 
-This extension allows to navigate in any VSCode document by indentation level. For example, you can uquickly find lines having the same, greater or lesser indentation level.
+This extension allows to navigate in any VSCode document by indentation level. For example, you can quickly find lines having the same, greater or lesser indentation level.
 
 It also provides some extra commands, such as navigate by word, that is optimized for screenreaders, and keystrokes that simplify selection of large amounts of text.
 
